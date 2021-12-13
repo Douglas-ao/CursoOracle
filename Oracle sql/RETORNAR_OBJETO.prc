@@ -1,0 +1,10 @@
+create or replace procedure RETORNA_NOMEPESSOA (I_NR_PESSOA IN PESSOA.NR_CPF%TYPE,
+                                               O_NM_PESSOA OUT PESSOA.NM_PESSOA%TYPE) is
+begin
+  SELECT PESSOA.NM_PESSOA
+  INTO   O_NM_PESSOA
+  FROM   PESSOA
+  WHERE  PESSOA.NR_CPF = I_NR_PESSOA;
+  
+end RETORNA_NOMEPESSOA;
+/
